@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const methodOverride = require('method-override');
+//Declaring pokemon from models/pokemon.js
+const pokemon = require("./models/pokemon.js");
 
 // Middleware
 app.set('view engine', 'ejs');
@@ -14,6 +16,7 @@ app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 //https://expressjs.com/en/resources/middleware/method-override.html#:~:text=Lets%20you%20use%20HTTP%20verbs,client%20doesn't%20support%20it.
 app.use(methodOverride("_method")); 
+//HTML forms only support GET and POST methods. MethodOverride is used to be able to utilize PUT and DELETE routes.
 
 
 //Root Route: GET
@@ -23,7 +26,8 @@ app.get('/', (req, res) => {
 
 //Index Route: GET
   app.get('/pokemon', (req, res) => {
-    res.render('index.ejs');
+    //Declaring pokemon to render images
+    res.render('index.ejs', {pokemon});
   });
 
 //New Route: GET
