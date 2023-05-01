@@ -19,10 +19,10 @@
   <div class="form-container">
     <h1>New Pokemon Form</h1>
     <form method="POST" action="/pokemon">
+      <!-- //Name// -->
       <label for="name">Name:</label>
       <input type="text" id="name" name="name"><br>
-      <label for="image">Image URL:</label>
-      <input type="text" id="image" name="img"><br>
+      <!-- //Type// -->
       <label>Type:</label>
       <div class="radio-group">
         <!-- //Radio Selection for the Type of Pokemon it is // -->
@@ -51,6 +51,8 @@
       <input type="text" id="hp" name="stats[hp]"><br>
       <label for="attack">Attack:</label>
       <label for="defense">Defense:</label>
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" name="img"><br>
 <input type="text" id="defense" name="stats[defense]"><br>
 <input type="submit" value="Submit" class="pokeball-button">
 </form>
@@ -61,3 +63,5 @@
 </div>
 </body>
 </html>
+
+

@@ -35,6 +35,13 @@ app.get('/', (req, res) => {
     res.render('new.ejs');
 })
 
+//
+app.get('/pokemon/:id', (req, res) => {
+  const id = req.params.id;
+  const foundPokemon = pokemon.find(p => p.id === id);
+  res.render('show', {pokemon: foundPokemon});
+});
+
 // Create route: POST
 app.post('/pokemon', (req, res) => {
   });

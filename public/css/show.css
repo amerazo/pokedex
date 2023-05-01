@@ -1,0 +1,46 @@
+body {
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    background-color: red;
+    color: white; 
+  }
+  
+  /* //Places Text Inside Card// */
+  .pokemon-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+
+/* //Centering Text on Card// */
+.pokemon-info {
+flex-basis: 50%;
+margin: 20px;
+  }
+
+/* //Text// */
+.pokemon-info p {
+ margin: 10px 0;
+}
+  
+/* Display Stats Without Bulletin */
+.pokemon-info ul {
+list-style-type: none;
+padding: 0;
+}
+
+/* Spacing Between List */
+.pokemon-info li {
+margin: 5px 0;
+}
+  

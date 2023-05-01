@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //Import Styling// -->
+    <link rel="stylesheet" href="/css/show.css">
+    <!-- //Import Font// -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title><%= pokemon.name %> | Pokedex</title>
+</head>
+<body>
+    <h1><%= pokemon.name %></h1>
+    <div class="pokemon-details">
+        <div class="pokemon-image">
+            <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>">
+        </div>
+        <div class="pokemon-info">
+            <p><strong>Type:</strong> <%= pokemon.type.join(", ") %></p>
+            <p><strong>Height:</strong> <%= pokemon.misc.height %></p>
+            <p><strong>Weight:</strong> <%= pokemon.misc.weight %> lbs</p>
+            <p><strong>Abilities:</strong> <%= pokemon.misc.abilities.normal.join(", ") %></p>
+            <p><strong>Hidden Ability:</strong> <%= pokemon.misc.abilities.hidden[0] %></p>
+            <p><strong>Stats:</strong></p>
+            <ul>
+                <li>HP: <%= pokemon.stats.hp %></li>
+                <li>Attack: <%= pokemon.stats.attack %></li>
+                <li>Defense: <%= pokemon.stats.defense %></li>
+                <li>Special Attack: <%= pokemon.stats.spattack %></li>
+                <li>Special Defense: <%= pokemon.stats.spdefense %></li>
+                <li>Speed: <%= pokemon.stats.speed %></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
