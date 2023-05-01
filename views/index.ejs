@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
     <title>Pokedex</title>
 </head>
 <body>
     <h1>Pokemon Index</h1>
+    <p>If you want to be able to edit or delete a Pokemon, type in the number of the entry. For example: "pokemon/001"</p>
     <!-- Button to Add New Pokemon -->
     <button onclick = "window.location.href='http://localhost:3000/pokemon/new';">Add New Pokemon</button>  
     <div class="pokemon-list">
@@ -16,10 +18,12 @@
         <div class="pokemon">
     <!-- Show the Image of the Pokemon -->
         <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
+    <!-- Show the Name of the Pokemon -->
+        <div class="pokemon-name"><%= pokemon[i].name %></div>
+    <!-- Hyperlink  of each Pokemon -->
+        <div class="pokemon-id"><a href="/pokemon/<%= pokemon[i].id %>"><%= pokemon[i].id %></a></div> 
     </div>
-    <% } %>
-</div>
+    <% } %> 
+   
 </body>
 </html>  
-
-

@@ -9,6 +9,15 @@
     <!-- //Import Font// -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title><%= pokemon.name %> | Pokedex</title>
+
+    <!-- //Edit Button// -->
+    <a href="/pokemon/<%= pokemon.id %>/edit">Edit</a>
+    <!-- //Delete Button// -->
+    <form action="/pokemon/<%= pokemon.id %>?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete <%= pokemon.name %></button>
+      </form>
+      
 </head>
 <body>
     <h1><%= pokemon.name %></h1>
@@ -17,6 +26,7 @@
             <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>">
         </div>
         <div class="pokemon-info">
+        <!-- //misc is the property of each Pokémon object that stores miscellaneous information about the Pokémon// -->
             <p><strong>Type:</strong> <%= pokemon.type.join(", ") %></p>
             <p><strong>Height:</strong> <%= pokemon.misc.height %></p>
             <p><strong>Weight:</strong> <%= pokemon.misc.weight %> lbs</p>
@@ -34,4 +44,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> 

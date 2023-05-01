@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/new.css">
-  <!-- //Import Font Roboto// -->
+   <!-- //Import Font Roboto//  -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>New Pokemon</title>
 </head>
 <body>
-<!-- //Adding Pokemon and Pikachu. Borrowed the code from CodeBase: https://codepen.io/raubaca/pen/obaZmG // -->
-  <div class="pokeball-container">
+<!-- //Home Button// -->
+<a href="/pokemon" class="btn">Home</a>
+<!-- /Adding Pokemon and Pikachu. Borrowed the code from CodeBase: https://codepen.io/raubaca/pen/obaZmG //  -->
+<div class="pokeball-container">
     <div class="pokeball">
       <div class="pokeball__button"></div>
     </div>
@@ -22,46 +24,57 @@
       <!-- //Name// -->
       <label for="name">Name:</label>
       <input type="text" id="name" name="name"><br>
+
+      <!-- //Image URL// -->
+      <label for="img">Image URL:</label>
+      <input type="text" id="img" name="img"><br>
+
       <!-- //Type// -->
-      <label>Type:</label>
-      <div class="radio-group">
-        <!-- //Radio Selection for the Type of Pokemon it is // -->
-        <label><input type="radio" name="type" value="Normal">Normal</label>
-        <label><input type="radio" name="type" value="Fire">Fire</label>
-        <label><input type="radio" name="type" value="Water">Water</label>
-        <label><input type="radio" name="type" value="Grass">Grass</label>
-        <label><input type="radio" name="type" value="Electric">Electric</label>
-        <label><input type="radio" name="type" value="Ice">Ice</label>
-        <label><input type="radio" name="type" value="Fighting">Fighting</label>
-        <label><input type="radio" name="type" value="Poison">Poison</label>
-        <label><input type="radio" name="type" value="Ground">Ground</label>
-        <label><input type="radio" name="type" value="Flying">Flying</label>
-        <label><input type="radio" name="type" value="Psychic">Psychic</label>
-        <label><input type="radio" name="type" value="Bug">Bug</label>
-        <label><input type="radio" name="type" value="Rock">Rock</label>
-        <label><input type="radio" name="type" value="Ghost">Ghost</label>
-        <label><input type="radio" name="type" value="Dragon">Dragon</label>
-        <label><input type="radio" name="type" value="Dark">Dark</label>
-        <label><input type="radio" name="type" value="Steel">Steel</label>
-        <label><input type="radio" name="type" value="Fairy">Fairy</label>
-      </div>
-      <br>
-      <!-- //HP stands for Hit Points, which is a numerical value that represents a Pokémon's health or how much damage it can take before fainting// -->
-      <label for="hp">Hit Points:</label>
+      <label for="type">Type:</label>
+      <input type="text" id="type" name="type"><br>
+
+      <!-- //Height// -->
+      <label for="height">Height:</label>
+      <input type="text" id="height" name="misc[height]"><br>
+
+      <!-- //Weight// -->
+      <label for="weight">Weight:</label>
+      <input type="text" id="weight" name="misc[weight]"><br>
+
+      <!-- //Abilities// -->
+      <label for="abilities">Abilities:</label>
+      <input type="text" id="abilities" name="misc[abilities][normal]"><br>
+
+      <!-- //Hidden Ability// -->
+      <label for="hidden_ability">Hidden Ability:</label>
+      <input type="text" id="hidden_ability" name="misc[abilities][hidden]"><br>
+
+      <!-- //Stats// -->
+      <label for="hp">HP:</label>
       <input type="text" id="hp" name="stats[hp]"><br>
+
       <label for="attack">Attack:</label>
+      <input type="text" id="attack" name="stats[attack]"><br>
+
       <label for="defense">Defense:</label>
-      <label for="image">Image URL:</label>
-      <input type="text" id="image" name="img"><br>
-<input type="text" id="defense" name="stats[defense]"><br>
-<input type="submit" value="Submit" class="pokeball-button">
-</form>
+      <input type="text" id="defense" name="stats[defense]"><br>
 
-<!-- //Pikachu Container// -->
-<div class="pokemon-container">
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
-</div>
-</body>
-</html>
+      <label for="spattack">Special Attack:</label>
+      <input type="text" id="spattack" name="stats[spattack]"><br>
 
+      <label for="spdefense">Special Defense:</label>
+      <input type="text" id="spdefense" name="stats[spdefense]"><br>
+
+      <label for="speed">Speed:</label>
+      <input type="text" id="speed" name="stats[speed]"><br>
+
+      <!-- //Submit Button// -->
+      <input type="submit" value="Submit">
+  </form>
+     <!-- //Pikachu Container// -->
+    <div class="pokemon-container">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+    </div>
+    </body>
+    </html>    
 

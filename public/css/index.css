@@ -1,0 +1,25 @@
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon {
+  width: 25%;
+  margin: 1%;
+  text-align: center;
+}
+
+.pokemon {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+h1 {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+  border: solid 2px blue;
+  padding: 0.5rem;
+}

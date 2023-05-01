@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //Import Styling// -->
+    <link rel="stylesheet" href="/css/edit.css">
+    <!-- //Import Font// -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Edit <%= pokemon.name %> | Pokedex</title>
+    
+</head>
+<body>
+    <h1>Edit <%= pokemon.name %></h1>
+    <div class="edit-pokemon">
+        <form action="/pokemon/<%= pokemon.id %>?_method=PUT" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= pokemon.name %>">
+            </div>
+            <div>
+                <label for="type">Type:</label>
+                <input type="text" id="type" name="type" value="<%= pokemon.type.join(", ") %>">
+            </div>
+            <div>
+                <label for="height">Height:</label>
+                <input type="text" id="height" name="height" value="<%= pokemon.misc.height %>">
+            </div>
+            <div>
+                <label for="weight">Weight:</label>
+                <input type="text" id="weight" name="weight" value="<%= pokemon.misc.weight %>">
+            </div>
+            <div>
+                <label for="abilities">Abilities:</label>
+                <input type="text" id="abilities" name="abilities" value="<%= pokemon.misc.abilities.normal.join(", ") %>">
+            </div>
+            <div>
+                <label for="hidden_ability">Hidden Ability:</label>
+                <input type="text" id="hidden_ability" name="hidden_ability" value="<%= pokemon.misc.abilities.hidden[0] %>">
+            </div>
+            <div>
+                <label for="hp">Hit Points:</label>
+                <input type="text" id="hp" name="hp" value="<%= pokemon.stats.hp %>">
+            </div>
+            <div>
+                <label for="attack">Attack:</label>
+                <input type="text" id="attack" name="attack" value="<%= pokemon.stats.attack %>">
+            </div>
+            <div>
+                <label for="defense">Defense:</label>
+                <input type="text" id="defense" name="defense" value="<%= pokemon.stats.defense %>">
+            </div>
+            <div>
+                <label for="spattack">Special Attack:</label>
+                <input type="text" id="spattack" name="spattack" value="<%= pokemon.stats.spattack %>">
+            </div>
+            <div>
+                <label for="spdefense">Special Defense:</label>
+                <input type="text" id="spdefense" name="spdefense" value="<%= pokemon.stats.spdefense %>">
+            </div>
+            <div>
+                <label for="speed">Speed:</label>
+                <input type="text" id="speed" name="speed" value="<%= pokemon.stats.speed %>">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>
