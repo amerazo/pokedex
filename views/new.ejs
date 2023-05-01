@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/new.css">
+  <!-- //Import Font Roboto// -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>New Pokemon</title>
+</head>
+<body>
+<!-- //Adding Pokemon and Pikachu. Borrowed the code from CodeBase: https://codepen.io/raubaca/pen/obaZmG // -->
+  <div class="pokeball-container">
+    <div class="pokeball">
+      <div class="pokeball__button"></div>
+    </div>
+  </div>
+  <div class="form-container">
+    <h1>New Pokemon Form</h1>
+    <form method="POST" action="/pokemon">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" name="img"><br>
+      <label>Type:</label>
+      <div class="radio-group">
+        <!-- //Radio Selection for the Type of Pokemon it is // -->
+        <label><input type="radio" name="type" value="Normal">Normal</label>
+        <label><input type="radio" name="type" value="Fire">Fire</label>
+        <label><input type="radio" name="type" value="Water">Water</label>
+        <label><input type="radio" name="type" value="Grass">Grass</label>
+        <label><input type="radio" name="type" value="Electric">Electric</label>
+        <label><input type="radio" name="type" value="Ice">Ice</label>
+        <label><input type="radio" name="type" value="Fighting">Fighting</label>
+        <label><input type="radio" name="type" value="Poison">Poison</label>
+        <label><input type="radio" name="type" value="Ground">Ground</label>
+        <label><input type="radio" name="type" value="Flying">Flying</label>
+        <label><input type="radio" name="type" value="Psychic">Psychic</label>
+        <label><input type="radio" name="type" value="Bug">Bug</label>
+        <label><input type="radio" name="type" value="Rock">Rock</label>
+        <label><input type="radio" name="type" value="Ghost">Ghost</label>
+        <label><input type="radio" name="type" value="Dragon">Dragon</label>
+        <label><input type="radio" name="type" value="Dark">Dark</label>
+        <label><input type="radio" name="type" value="Steel">Steel</label>
+        <label><input type="radio" name="type" value="Fairy">Fairy</label>
+      </div>
+      <br>
+      <!-- //HP stands for Hit Points, which is a numerical value that represents a Pokémon's health or how much damage it can take before fainting// -->
+      <label for="hp">Hit Points:</label>
+      <input type="text" id="hp" name="stats[hp]"><br>
+      <label for="attack">Attack:</label>
+      <label for="defense">Defense:</label>
+<input type="text" id="defense" name="stats[defense]"><br>
+<input type="submit" value="Submit" class="pokeball-button">
+</form>
+
+<!-- //Pikachu Container// -->
+<div class="pokemon-container">
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+</div>
+</body>
+</html>
